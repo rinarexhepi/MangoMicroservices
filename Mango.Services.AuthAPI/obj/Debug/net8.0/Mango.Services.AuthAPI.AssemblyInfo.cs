@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mango.Services.AuthAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8877ec45ff92d697e67bdf5b96cfda158c40d8f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6029e5566ae32b39c0da7153a8ee66d5a4063a19")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mango.Services.AuthAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mango.Services.AuthAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
