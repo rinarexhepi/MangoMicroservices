@@ -2,6 +2,7 @@
 using Mango.Services.AuthAPI.Service.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace Mango.Services.AuthAPI.Controllers
 {
@@ -19,10 +20,11 @@ namespace Mango.Services.AuthAPI.Controllers
 
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegistrationRequestDto model) 
+        public async Task<IActionResult> Register([FromBody] RegistrationRequestDto model)
         {
+
             var errorMessage = await _authService.Register(model);
-            if (!string.IsNullOrEmpty(errorMessage)) 
+            if (!string.IsNullOrEmpty(errorMessage))
             {
                 _response.IsSuccess = false;
                 _response.Message = errorMessage;
@@ -55,7 +57,9 @@ namespace Mango.Services.AuthAPI.Controllers
                 return BadRequest(_response);
             }
             return Ok(_response);
+
         }
+
 
     }
 }

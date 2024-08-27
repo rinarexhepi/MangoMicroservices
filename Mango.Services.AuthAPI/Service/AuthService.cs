@@ -24,9 +24,9 @@ namespace Mango.Services.AuthAPI.Service
         public async Task<bool> AssignRole(string email, string roleName)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(u => u.Email.ToLower() == email.ToLower());
-            if (user != null) 
+            if (user != null)
             {
-                if (!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult()) 
+                if (!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult())
                 {
                     //krijojme rol nese nuk ekziston
                     _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
@@ -34,7 +34,7 @@ namespace Mango.Services.AuthAPI.Service
                 await _userManager.AddToRoleAsync(user, roleName);
                 return true;
             }
-            return false;   
+            return false;
 
         }
 
@@ -76,12 +76,12 @@ namespace Mango.Services.AuthAPI.Service
                 Email = registrationRequestDto.Email,
                 NormalizedEmail = registrationRequestDto.Email.ToUpper(),
                 Name = registrationRequestDto.Name,
-                PhoneNumber = registrationRequestDto.PhoneNumber,
+                PhoneNumber = registrationRequestDto.PhoneNumber
             };
 
             try
             {
-                var result = await _userManager.CreateAsync(user, registrationRequestDto.Password); //rreshti qe krijon userin duke e ruajtur ne databaze
+                var result = await _userManager.CreateAsync(user, registrationRequestDto.Password);
                 if (result.Succeeded)
                 {
                     var userToReturn = _db.ApplicationUsers.First(u => u.UserName == registrationRequestDto.Email);
@@ -91,21 +91,23 @@ namespace Mango.Services.AuthAPI.Service
                         Email = userToReturn.Email,
                         ID = userToReturn.Id,
                         Name = userToReturn.Name,
-                        PhoneNumber = userToReturn.PhoneNumber,
+                        PhoneNumber = userToReturn.PhoneNumber
                     };
 
                     return "";
+
                 }
-                else 
+                else
                 {
                     return result.Errors.FirstOrDefault().Description;
                 }
 
             }
-            catch(Exception ex)  
-            { 
+            catch (Exception ex)
+            {
+                
             }
-            return "Error encountered";
+            return "Error Encountered";
         }
 
         public Task Register()
