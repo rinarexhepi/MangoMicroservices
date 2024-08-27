@@ -32,3 +32,8 @@ C:\Users\Rina\source\repos\Mango\Mango.Web\obj\Debug\net8.0\refint\Mango.Web.dll
 C:\Users\Rina\source\repos\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.pdb
 C:\Users\Rina\source\repos\Mango\Mango.Web\obj\Debug\net8.0\Mango.Web.genruntimeconfig.cache
 C:\Users\Rina\source\repos\Mango\Mango.Web\obj\Debug\net8.0\ref\Mango.Web.dll
+C:\Users\Rina\source\repos\Mango\Mango.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Rina\source\repos\Mango\Mango.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Rina\source\repos\Mango\Mango.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Rina\source\repos\Mango\Mango.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Rina\source\repos\Mango\Mango.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
